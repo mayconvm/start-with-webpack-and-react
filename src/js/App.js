@@ -1,15 +1,17 @@
 'use strict'
 
 import React from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-import Title from './components/Title'
+import TopBar from './components/TopBar'
+// import Title from './components/Title'
 
 class App extends React.Component {
   render () {
     return (
-      <div>
-        <Title />
-      </div>
+      <MuiThemeProvider>
+        <TopBar />
+      </MuiThemeProvider>
     )
   }
 };
