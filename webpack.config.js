@@ -1,7 +1,8 @@
 'use strict'
 
-const path = require('path');
+const path = require('path')
 const webpack = require("webpack")
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = {
   devtool: 'source-map',
@@ -20,7 +21,8 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin(),
   ],
 
   module: {
