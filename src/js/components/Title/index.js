@@ -1,9 +1,9 @@
 'use strict'
 
-import React from 'react';
+import React from 'react'
 
 class Title extends React.Component {
-  render() {
+  render () {
     return (
       <h1>Titulo 1</h1>
     )
