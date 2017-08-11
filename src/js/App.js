@@ -4,13 +4,16 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import TopBar from './components/TopBar'
-// import Title from './components/Title'
+import BoxLogs from './components/BoxLogs'
 
 class App extends React.Component {
   render () {
     return (
       <MuiThemeProvider>
-        <TopBar />
+        <div>
+          <TopBar />
+          <BoxLogs />
+        </div>
       </MuiThemeProvider>
     )
   }
