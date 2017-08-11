@@ -48,6 +48,17 @@ module.exports = {
         exclude: /node_modules/,
         include: /src/,
         loader: 'babel-loader'
+      },
+
+      {
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|txt)(\?.*)?$/,
+        include: /src/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'media/[name].[hash:8].[ext]'
+          }
+        }
       }
     ]
 
