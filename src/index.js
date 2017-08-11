@@ -8,9 +8,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import App from './js/App'
 
 const renderApp = (NextApp) => {
-  // Needed for onTouchTap
-  // http://stackoverflow.com/a/34015469/988941
-  injectTapEventPlugin()
 
   ReactDOM.render(
     <AppContainer>
@@ -19,6 +16,10 @@ const renderApp = (NextApp) => {
     document.querySelector('[data-js="app-root"]')
   )
 }
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin()
 
 // start
 renderApp(App)
