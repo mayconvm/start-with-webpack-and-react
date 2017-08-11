@@ -1,34 +1,27 @@
 'use strict'
 
 import React from 'react'
-import FontIcon from 'material-ui/FontIcon'
-import {BottomNavigationItem} from 'material-ui/BottomNavigation'
 
 import AppBar from 'material-ui/AppBar'
-
-const favoritesIcon = <FontIcon style={{margin: 0}} className='material-icons'>favorite</FontIcon>
+import OptionLog from './Option'
 
 const listBtns = [
-  <BottomNavigationItem
-    key={0}
-    label='Favorites'
-    icon={favoritesIcon}
-    style={{margin: 0}}
-  />,
-  <BottomNavigationItem
-    key={1}
-    label='Favorites'
-    icon={favoritesIcon}
-    style={{margin: 0}}
-  />
+  <OptionLog label={'Error'} key={2} />,
+  <OptionLog label={'Log'} key={1} />,
+  <OptionLog label={'Debug'} key={3} />
 ]
+
+const styles = {
+  position: 'fixed'
+}
 
 class TopBar extends React.Component {
   render () {
     return (
       <AppBar
         title='Title'
-        children={listBtns}
+        style={styles}
+        children={<div> {listBtns} </div>}
       />
     )
   }
